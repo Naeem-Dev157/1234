@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HyperCode — Naeem Dev, Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Naeem/styles.css">
+</head>
+<body>
+<div id="bootScreen" aria-hidden="true">
+  <p>$ booting hypercode.dev...</p>
+  <p>$ loading modules [ react, node, glass-ui ]... ok</p>
+  <p>$ connecting to portfolio://naeem-dev... ok</p>
+  <p>$ compiling assets... done</p>
+  <p>$ ready.<span class="cursor-blink"></span></p>
+</div>
+
+<div id="cursorH" aria-hidden="true"></div>
+<div id="cursorV" aria-hidden="true"></div>
+<div id="customCursor" aria-hidden="true"></div>
+
+<button id="themeToggle" aria-label="Toggle light/dark theme">🌙 dark</button>
+
+<canvas id="codeRain" aria-hidden="true"></canvas>
+
+<div class="tabbar" role="navigation" aria-label="Section tabs">
+  <div class="tab-window-dots"><span></span><span></span><span></span></div>
+  <div class="tabs" id="tabs">
+    <a class="tab active" href="#hero" data-tab="hero"><span class="dot">●</span>intro.js</a>
+    <a class="tab" href="#about" data-tab="about"><span class="dot">●</span>about.md</a>
+    <a class="tab" href="#skills" data-tab="skills"><span class="dot">●</span>skills.json</a>
+    <a class="tab" href="#projects" data-tab="projects"><span class="dot">●</span>projects.js</a>
+    <a class="tab" href="#experience" data-tab="experience"><span class="dot">●</span>log --oneline</a>
+    <a class="tab" href="#contact" data-tab="contact"><span class="dot">●</span>contact.sh</a>
+  </div>
+</div>
+
+<div class="shell">
+  <div class="gutter" id="gutter" aria-hidden="true"></div>
+
+  <main>
+
+
+	<section class="hero" id="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="kw">import</span> <span class="punc">{</span> <span class="str">Developer</span> <span class="punc">}</span> <span class="kw">from</span> <span class="str">'./hypercode'</span><span class="punc">;</span></div>
+          <div class="code-block">
+<span class="kw">const</span> <span class="func">hyperCode</span> <span class="punc">=</span> <span class="kw">new</span> <span class="func">Developer</span><span class="punc">({</span>
+  <span class="prop">name</span><span class="punc">:</span> <span class="str">'Naeem Dev'</span><span class="punc">,</span>
+  <span class="prop">role</span><span class="punc">:</span> <span class="str">'Full-Stack Engineer'</span><span class="punc">,</span>
+  <span class="prop">focus</span><span class="punc">:</span> <span class="punc">[</span><span class="str">'distributed systems'</span><span class="punc">,</span> <span class="str">'developer tools'</span><span class="punc">,</span> <span class="str">'fast UIs'</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="prop">shipsAt</span><span class="punc">:</span> <span class="str">'production speed'</span><span class="punc">,</span>
+  <span class="prop">basedIn</span><span class="punc">:</span> <span class="str">'Karachi, Pakistan'</span>
+<span class="punc">});</span>
+
+<span class="cmt">// I turn ambiguous problems into shipped, maintainable code.</span>
+<span class="func">hyperCode</span><span class="punc">.</span><span class="func">build</span><span class="punc">();</span><span class="cursor-blink"></span></div>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#projects">view_projects()</a>
+            <a class="btn btn-ghost" href="#contact">$ contact --open</a>
+            <a class="btn btn-ghost" href="Naeem/resume.pdf" download>⬇ resume.pdf</a>
+          </div>
+        </div>
+
+        <div class="hero-side glass-card">
+          <div class="hs-title">// runtime.status</div>
+          <ul>
+            <li><span>availability</span><b>open to work</b></li>
+            <li><span>experience</span><b>6+ years</b></li>
+            <li><span>stack</span><b>TS · Node · Python</b></li>
+            <li><span>response time</span><b>&lt; 24h</b></li>
+            <li><span>location</span><b>Karachi, Pakistan</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="eyebrow"><span class="punc">## </span><span class="str">about.md</span></div>
+      <h2>About <span class="brace">{ }</span></h2>
+      <div class="about-body">
+        <span class="cmt">&lt;!-- who is Naeem Dev --&gt;</span><br><br>
+        I'm <strong>Naeem Dev</strong>, a full-stack developer who likes problems with sharp edges: race conditions,
+        slow queries, APIs that fall over under real traffic. I've spent the last six years building
+        products end to end — from schema design to the pixel that ships to a user's screen.<br><br>
+        I care about <strong>readable code</strong> more than clever code, <strong>fast feedback loops</strong>
+        more than perfect plans, and shipping something real over polishing something theoretical.
+        When I'm not writing code, I'm usually reading source, breaking my own side projects, or
+        arguing (kindly) about tabs vs. spaces.<br><br>
+        <span class="cmt">&lt;!-- end about.md --&gt;</span>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="eyebrow"><span class="punc">{</span> <span class="str">"file"</span><span class="punc">:</span> <span class="str">"skills.json"</span> <span class="punc">}</span></div>
+      <h2>Skills <span class="brace">[ ]</span></h2>
+      <div class="skills-panel glass-card">
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-row" data-level="95"><div class="skill-top"><span class="k">"javascript_typescript"</span><span class="v">95</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="90"><div class="skill-top"><span class="k">"react_nextjs"</span><span class="v">90</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="88"><div class="skill-top"><span class="k">"node_express"</span><span class="v">88</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="80"><div class="skill-top"><span class="k">"python"</span><span class="v">80</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="82"><div class="skill-top"><span class="k">"postgresql_redis"</span><span class="v">82</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="75"><div class="skill-top"><span class="k">"docker_aws"</span><span class="v">75</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="78"><div class="skill-top"><span class="k">"graphql_rest"</span><span class="v">78</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="skill-row" data-level="55"><div class="skill-top"><span class="k">"rust // learning"</span><span class="v">55</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="eyebrow"><span class="kw">export</span> <span class="kw">default</span> <span class="func">projects</span></div>
+      <h2>Projects <span class="brace">[ ]</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card">
+          <div class="project-file"><span class="ext">◆</span> pulse.ts</div>
+          <h3>Pulse</h3>
+          <p>Real-time analytics dashboard streaming 40k+ events/sec with sub-100ms visual updates.</p>
+          <div class="tag-row"><span class="tag">React</span><span class="tag">WebSockets</span><span class="tag">Redis</span></div>
+          <div class="project-links"><a href="#contact">source →</a><a href="#contact">live demo →</a></div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-file"><span class="ext">◆</span> ledger.py</div>
+          <h3>Ledger</h3>
+          <p>Expense-tracking API with double-entry accounting logic and automated reconciliation.</p>
+          <div class="tag-row"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Celery</span></div>
+          <div class="project-links"><a href="#contact">source →</a><a href="#contact">docs →</a></div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-file"><span class="ext">◆</span> nimbus.go</div>
+          <h3>Nimbus</h3>
+          <p>Serverless image-processing pipeline handling resize, compression, and CDN routing.</p>
+          <div class="tag-row"><span class="tag">AWS Lambda</span><span class="tag">Go</span><span class="tag">S3</span></div>
+          <div class="project-links"><a href="#contact">source →</a><a href="#contact">case study →</a></div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-file"><span class="ext">◆</span> cipher.rs</div>
+          <h3>Cipher</h3>
+          <p>End-to-end encrypted chat with forward secrecy, built to learn Rust's async ecosystem.</p>
+          <div class="tag-row"><span class="tag">Rust</span><span class="tag">WebRTC</span><span class="tag">Tokio</span></div>
+          <div class="project-links"><a href="#contact">source →</a><a href="#contact">write-up →</a></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="eyebrow">$ git <span class="kw">log</span> --oneline --graph</div>
+      <h2>Experience <span class="brace">( )</span></h2>
+
+      <div class="log-entry">
+        <div class="log-hash">a3f9c1e</div>
+        <div class="log-main">
+          <div class="log-msg">Senior Full-Stack Engineer — Northwind Labs</div>
+          <div class="log-meta">2023 — present <span class="sep">·</span> <span class="branch">main</span></div>
+          <div class="log-desc">Led migration from monolith to modular services; cut p95 API latency by 43%. Mentored two junior engineers.</div>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="log-hash">7d21b48</div>
+        <div class="log-main">
+          <div class="log-msg">Full-Stack Developer — Vantage Systems</div>
+          <div class="log-meta">2021 — 2023 <span class="sep">·</span> <span class="branch">main</span></div>
+          <div class="log-desc">Built the customer-facing dashboard from scratch; shipped weekly for two years with zero major rollbacks.</div>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="log-hash">e05af62</div>
+        <div class="log-main">
+          <div class="log-msg">Backend Developer — Fieldstone Co.</div>
+          <div class="log-meta">2019 — 2021 <span class="sep">·</span> <span class="branch">main</span></div>
+          <div class="log-desc">Designed the core billing service handling 200k+ transactions monthly.</div>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="log-hash">1c4e9a0</div>
+        <div class="log-main">
+          <div class="log-msg">B.S. Computer Science — State University</div>
+          <div class="log-meta">2015 — 2019 <span class="sep">·</span> <span class="branch">origin</span></div>
+          <div class="log-desc">Focused on distributed systems and algorithms. Graduated with honors.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal" style="border-bottom:none;">
+      <div class="eyebrow">#!/bin/bash</div>
+      <h2>Contact <span class="brace">()</span></h2>
+
+      <div class="terminal glass-card">
+        <div class="terminal-head">
+          <span></span><span></span><span></span>
+          <div class="th-label">zsh — contact.sh</div>
+        </div>
+        <div class="terminal-body">
+          <div class="prompt-line"><span class="p1">naeem</span>@<span class="p2">hypercode</span> ~ % ./contact.sh</div>
+          <form id="contactForm">
+            <div class="field"><label for="name">name</label><input id="name" type="text" placeholder="Ada Lovelace" required></div>
+            <div class="field"><label for="email">email</label><input id="email" type="email" placeholder="ada@example.com" required></div>
+            <div class="field"><label for="message">message</label><textarea id="message" placeholder="Let's build something..." required></textarea></div>
+            <div class="typing-indicator" id="typingIndicator"><span class="dot"></span><span class="dot"></span><span class="dot"></span> typing...</div>
+            <button class="run-btn" type="submit">$ send --now</button>
+            <div class="output-line" id="outputLine">✓ Message queued. I'll reply within 24h.</div>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-alt">
+        <a href="mailto:Naeemansari.engineer@gmail.com">Naeemansari.engineer@gmail.com</a>
+        <a href="tel:03463162099">0346-3162099</a>
+        <a href="https://wa.me/923463162099" target="_blank" rel="noopener">WhatsApp →</a>
+        <span>Karachi, Pakistan</span>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <span>© 2026 Naeem Dev — HyperCode. Built line by line.</span>
+  <span>exit 0</span>
+</footer>
+
+<div class="statusbar">
+  <span id="sb-branch">⎇ main</span>
+  <span class="sep">|</span>
+  <span>UTF-8</span>
+  <span class="sep">|</span>
+  <span>JavaScript</span>
+  <span class="sep">|</span>
+  <span id="sb-section">Ln 1, intro.js</span>
+  <span class="sep">|</span>
+  <span>Prettier ✓</span>
+  <span class="sep">|</span>
+  <span>0 problems</span>
+</div>
+
+<div id="mouseFollower" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 3 L18 18 L12 14.5 L6 18 Z" fill="rgba(140,255,170,0.85)" stroke="rgba(140,255,170,0.4)" stroke-width="1"/>
+  </svg>
+</div>
+
+<script src="Naeem/script.js"></script>
+
+</body>
+</html>
